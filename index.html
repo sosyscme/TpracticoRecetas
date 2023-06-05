@@ -14,9 +14,8 @@
     <link href="css/llamada.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
     <link href="css/destacados.css" rel="stylesheet">
-    <link href="Css/diferenciales.css" rel="stylesheet">
+    <link href="css/diferenciales.css" rel="stylesheet">
     <link href="css/sobre-nosotros.css" rel="stylesheet">
-    <link href="css/planes.css" rel="stylesheet">
     <link href="css/contacto.css" rel="stylesheet">
     <link href="css/institucional.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
@@ -27,12 +26,11 @@
         <img class="head__logo" src="img/logo-apeperia.svg" alt="logo de apeperia">
         <nav class="head__navegacion">
             <ul>
-                <li class="head__enlace "><a href="a">Sobre</a></li>
-                <li class="head__enlace "><a href="a">Planes</a></li>
-                <li class="head__enlace "><a href="a">Blog</a></li>
-                <li class="head__enlace "><a href="a">Destacados</a></li>
-                <li class="head__enlace "><a href="a">Institucional</a></li>
-                <li class="head__enlace "><a href="a">Contacto</a></li>
+                <li class="head__enlace "><a href="#seccion1">Nosotros</a></li>
+                <li class="head__enlace "><a href="planes.html">Planes</a></li>
+                <li class="head__enlace "><a href="#seccion4">Destacados</a></li>
+                <li class="head__enlace "><a href="#seccion5">Institucional</a></li>
+                <li class="head__enlace "><a href="#seccion6">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -43,7 +41,7 @@
                 aplicaciones móviles y
                 web.<a class="llamada__boton boton" href="a">Conozca los planes</a></p>
         </section>
-        <section class="destacados container">
+        <section id="seccion4" class="destacados container">
             <h2 class="destacados__titulo">Destacados</h2>
             <a href="a">
                 <figure class="destacados__panel">
@@ -80,7 +78,7 @@
                 </li>
             </ul>
         </section>
-        <section class="sobre_nosotros container">
+        <section id="seccion1" class="sobre_nosotros container">
             <div class="sobre_nosotros__contenido">
                 <h2 class="sobre_nosotros__titulo">Sobre nosotros</h2>
                 <p class="sobre_nosotros__texto">
@@ -104,47 +102,13 @@
             </div>
             <img src="img/sobre-apeperia.png" alt="sobre nosotros" class="sobre_nosotros__imagen">
         </section>
-        <section class="planes container">
-            <h2 class="planes__titulo">Planes</h2>
-            <ul class="planes__tarjetas">
-                <li class="tarjetas tarjetas--start">
-                    <h3 class="tarjetas__titulo">Start</h3>
-                    <articule class="tarjetas__contenido">
-                        <p class="tarjetas__precio"><em>$ 500</em></p>
-                        <p class="tarjetas__texto">5 manutenciones mensuales</p>
-                        <p class="tarjetas__texto">App SEO</p>
-                        <p class="tarjetas__texto">1 sistema operacional</p>
-                        <a href="#" class="tarjetas__boton tarjetas__boton--start boton">Asignar plan</a>
-                    </articule>
-                </li>
-                <li class="tarjetas tarjetas--ultra">
-                    <h3 class="tarjetas__titulo">Ultra</h3>
-                    <articule class="tarjetas__contenido">
-                        <p class="tarjetas__precio"><em>$ 1500</em></p>
-                        <p class="tarjetas__texto">20 manutenciones mensuales</p>
-                        <p class="tarjetas__texto">App SEO</p>
-                        <p class="tarjetas__texto">4 sistemas operacionales</p>
-                        <a href="#" class="tarjetas__boton tarjetas__boton--ultra boton">Asignar plan</a>
-                    </articule>
-                </li>
-                <li class="tarjetas tarjetas--mega">
-                    <h3 class="tarjetas__titulo">Mega</h3>
-                    <articule class="tarjetas__contenido">
-                        <p class="tarjetas__precio"><em>$ 1500</em></p>
-                        <p class="tarjetas__texto">10 manutenciones mensuales</p>
-                        <p class="tarjetas__texto">App SEO</p>
-                        <p class="tarjetas__texto">2 sistemas operacionales</p>
-                        <a href="#" class="tarjetas__boton tarjetas__boton--mega boton">Asignar plan</a>
-                    </articule>
-                </li>
-            </ul>
-        </section>
-        <section class="contacto container">
+        
+        <section id="seccion6" class="contacto container">
             <h2 class="contacto__titulo">Contacto</h2>
             <p>Entre en contacto con nosotros</p>
             <a href="#" class="contacto__boton boton">Entre en contacto</a>
         </section>
-        <Section class="institucional container">
+        <Section id="seccion5" class="institucional container">
             <h2 class="institucional__titulo">Institucional</h2>
             <div class="institucional__contenido">
                 <div class="institucional__informaciones">
@@ -176,7 +140,7 @@
             <nav>
                 <ul class="footer__navegacion">
                     <li class="footer__enlace"><a href="#">Sobre</a></li>
-                    <li class="footer__enlace"><a href="#">Planes</a></li>
+                    <li class="footer__enlace"><a href="#seccion2">Planes</a></li>
                     <li class="footer__enlace"><a href="#">Blog</a></li>
                     <li class="footer__enlace"><a href="#">Destacados</a></li>
                     <li class="footer__enlace"><a href="#">Institucional</a></li>

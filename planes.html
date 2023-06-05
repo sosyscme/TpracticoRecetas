@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home | Apeperia </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/head.css" rel="stylesheet">
+    <link href="css/llamada.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/destacados.css" rel="stylesheet">
+    <link href="css/diferenciales.css" rel="stylesheet">
+    
+    <link href="css/planes.css" rel="stylesheet">
+   
+    <link href="css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+
+<body>
+    <header class="headP container">
+        <img class="headP__logo" src="img/logo-apeperia.svg" alt="logo de apeperia">
+        <nav class="headP__navegacion">
+            <ul>
+                <li class="head__enlace "><a href="index.html">Nosotros</a></li>
+                <li class="head__enlace "><a href="index.html">Destacados</a></li>
+                <li class="head__enlace "><a href="index.html">Institucional</a></li>
+                <li class="head__enlace "><a href="index.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="seccion1" class="llamadaPl container">
+            <h1 class="llamada__tituloPl">Elija su plan</h1>
+            <p class="llamada__textoPl">Elija el plan que mas se adecue a usted y obtenga hasta un 75 % de descuento dependiendo del plan
+              
+       
+        <section id="seccion2" class="planes container">
+            <h2 class="planes__titulo">Planes</h2>
+            <ul class="planes__tarjetas">
+                <li class="tarjetas tarjetas--start">
+                    <h3 class="tarjetas__titulo">Start</h3>
+                    <articule class="tarjetas__contenido">
+                        <p class="tarjetas__precio"><em>$ 1000</em></p>
+                        <p class="tarjetas__texto">Mantenimiento por un mes</p>
+                        <p class="tarjetas__texto">App SEO</p>
+                        <p class="tarjetas__texto">1 sistema operacional</p>
+                        <a href="#" class="tarjetas__boton tarjetas__boton--start boton">Asignar plan</a>
+                    </articule>
+                </li>
+                <li class="tarjetas tarjetas--ultra">
+                    <h3 class="tarjetas__titulo">Ultra</h3>
+                    <articule class="tarjetas__contenido">
+                        <p class="tarjetas__precio"><em>$ 1000</em></p>
+                        <p class="tarjetas__texto">Mantenimiento por 6 mes</p>
+                        <p class="tarjetas__texto">App SEO</p>
+                        <p class="tarjetas__texto">2 sistemas operacionales</p>
+                        <a href="#" class="tarjetas__boton tarjetas__boton--ultra boton">Asignar plan</a>
+                    </articule>
+                </li>
+                <li class="tarjetas tarjetas--mega">
+                    <h3 class="tarjetas__titulo">Mega</h3>
+                    <articule class="tarjetas__contenido">
+                        <p class="tarjetas__precio"><em>$ 1000</em></p>
+                        <p class="tarjetas__texto">Mantenimiento por un año</p>
+                        <p class="tarjetas__texto">App SEO</p>
+                        <p class="tarjetas__texto">4 sistemas operacionales</p>
+                        <a href="#" class="tarjetas__boton tarjetas__boton--mega boton">Asignar plan</a>
+                    </articule>
+                </li>
+            </ul>
+        </section>
+        <section class="registro container">
+            <h2>Formulario de Registro</h2>
+            <form id="registro-form">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required pattern=".{3,}" title="El nombre debe tener más de 3 letras">
+                    
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required pattern=".{3,}" title="El Apellido debe tener más de 3 letras">>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="plan">Seleccionar plan:</label>
+                    <select id="plan">
+                        <option value="plan1">Start</option>
+                        <option value="plan2">Ultra</option>
+                        <option value="plan3">Mega</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+            <div id="descuento"></div>
+            <div id="total"></div>
+        </section>
+        <script>
+            const registroForm = document.getElementById('registro-form');
+            const descuentoEl = document.getElementById('descuento');
+            const totalEl = document.getElementById('total');
+        
+            registroForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                const nombre = document.getElementById('nombre').value;
+                const apellido = document.getElementById('apellido').value;
+                const email = document.getElementById('email').value;
+                const plan = document.getElementById('plan').value;
+        
+                let descuento = 0;
+                let total = 0;
+        
+                switch (plan) {
+                    case 'plan1':
+                        descuento = 25; // Descuento del 25% para el Plan 1
+                        total = 1000 - (1000 * descuento / 100);
+                        break;
+                    case 'plan2':
+                        descuento = 50; // Descuento del 50% para el Plan 2
+                        total = 1000 - (1000 * descuento / 100);
+                        break;
+                    case 'plan3':
+                        descuento = 75; // Descuento del 75% para el Plan 3
+                        total = 1000 - (1000 * descuento / 100);
+                        break;
+                }
+        
+                descuentoEl.innerHTML = `Descuento: ${descuento}%`;
+                totalEl.innerHTML = `Total a pagar: $${total.toFixed(2)}`;
+            });
+        </script>
+        
+        
+       
+        <footer class="footer container">
+            <img src="img/logo-apeperia.svg" alt="" class="footer__logo">
+            <ul class="footer__social">
+                <li><a href="#" class="footer__midia"><img src="img/facebook.png" alt="icono de facebook"></a></li>
+                <li><a href="#" class="footer__midia"><img src="img/twitter.png" alt="icono de twitter"></a></li>
+                <li><a href="#" class="footer__midia"><img src="img/instagram.png" alt="icono de instagram"></a></li>
+            </ul>
+            <nav>
+                <ul class="footer__navegacion">
+                    <li class="footer__enlace"><a href="#">Sobre</a></li>
+                    <li class="footer__enlace"><a href="#seccion2">Planes</a></li>
+                    <li class="footer__enlace"><a href="#">Blog</a></li>
+                    <li class="footer__enlace"><a href="#">Destacados</a></li>
+                    <li class="footer__enlace"><a href="#">Institucional</a></li>
+                    <li class="footer__enlace"><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
+</body>
+
+</html> 

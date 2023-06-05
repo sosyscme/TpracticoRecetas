@@ -1,0 +1,84 @@
+.registro {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:rgb(247, 244, 244);
+    border-radius: 5px;
+  }
+  
+  .registro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .registro form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .registro label {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .registro input,
+  .registro select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .registro button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .registro button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .registro #descuento,
+  .registro #total {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .registro {
+        max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .registro form {
+      width: 80%;
+    }
+  
+    .registro label {
+      text-align: left;
+    }
+  
+    .registro button[type="submit"] {
+      width: auto;
+    }
+  
+    .registro #descuento,
+    .registro #total {
+      text-align: left;
+      color: #333;
+    }
+  }
+  

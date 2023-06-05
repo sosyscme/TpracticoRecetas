@@ -1,4 +1,4 @@
-.llamada  {
+.llamada, .llamadaPl  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,22 @@
     padding-bottom: 2.5rem;
 }
 
-.llamada__titulo {
+.llamadaPl  {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+
+    color: #FFFFFF;
+    text-align: center;
+    
+    background-color: gray;
+
+    padding-top: 12.25rem;
+    padding-bottom: 2.5rem;
+}
+
+
+.llamada__titulo, .llamada__tituloPl  {
     font-family: var(--montserrat);
     font-size: 2rem;
     font-weight: 700;
@@ -21,7 +36,7 @@
     margin-bottom: 1.5rem;
 }
 
-.llamada__texto {
+.llamada__texto, .llamada__textoPl {
     font-size: 1.25rem;
     line-height: normal;
 
@@ -40,8 +55,9 @@
         padding-top: 8.25rem;
     }
 
-    .llamada__titulo {
+    .llamada__titulo, .llamada__tituloPl {
         font-size: 3.25rem;
         margin-bottom: 2rem;
     }
+
 }

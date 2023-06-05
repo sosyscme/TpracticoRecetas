@@ -1,4 +1,4 @@
-.head {
+.head, .headP{
     color: #FFFFFF;
 
     width: 100%;
@@ -16,16 +16,19 @@
 
     position: absolute;
 }
+.headP {
+    background-color: darkgray;
+}
 
-.head__logo {
+.head__logo, .headP__logo {
     margin-bottom: 1rem;
 }
 
-.head__navegacion {
+.head__navegacion, .headP__navegacion {
     text-align: center;
 }
 
-.head__enlace {
+.head__enlace, .headP__enlace {
     font-size: 1.1rem;
 
     display: inline-block;
@@ -37,6 +40,14 @@
 
 @media screen and (min-width: 1024px) {
     .head {
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .headP {
         flex-direction: row;
         justify-content: space-between;
         border: none;
